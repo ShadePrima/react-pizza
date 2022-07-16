@@ -5,6 +5,8 @@
   text-align: center;
   margin-bottom: 65px;
 
+ 
+
   &-wrapper {
     display: flex;
     justify-content: center;
@@ -65,5 +67,11 @@
     font-size: 22px;
     line-height: 27px;
     letter-spacing: 0.015em;
+  }
+}
+
+@media (max-width: 420px) {
+  .pizza-block {
+    width: 246px;
   }
 }
