@@ -4,13 +4,12 @@ function Sort() {
   const [open, setOpen] = React.useState(false);
   const [selected, setSelected] = React.useState(0);
   const list = ["popularity", "price", "alphabetical"];
-  const sortName = list[selected] 
+  const sortName = list[selected];
 
   const onClickListItem = (index) => {
     setSelected(index);
     setOpen(false);
-  }; 
-
+  };
 
   return (
     <div className="sort">
