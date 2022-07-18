@@ -10,6 +10,12 @@
     justify-content: space-between;
   }
 
+  @media (max-width: 730px) {
+    .container {
+      align-items: flex-start;
+    }
+  }
+
   &__logo {
     display: flex;
 
