@@ -2,9 +2,10 @@ import React from "react";
 
 import styles from "./Search.module.scss";
 import close from "../../assets/img/close.svg";
+import { SearchContext } from "../../App";
 
-const Search = ({ searchValue, setSearchValue }) => {
-  console.log(searchValue, "input change");
+const Search = () => {
+  const { searchValue, setSearchValue } = React.useContext(SearchContext);
   return (
     <div className={styles.root}>
       <svg
