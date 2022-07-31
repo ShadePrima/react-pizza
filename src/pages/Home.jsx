@@ -21,7 +21,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
-  console.log(isSearch);
+
   const { categoryId, sort, curentPage } = useSelector((state) => state.filter);
 
   const { searchValue } = React.useContext(SearchContext);
@@ -84,18 +84,14 @@ const Home = () => {
     }
   }, []);
 
-
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     if (!isSearch.current) {
       fetchPizzas();
     }
     isSearch.current = false;
   }, [categoryId, sort.sortProperty, searchValue, curentPage]);
-
-  
-  
 
   const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
   const skeletons = [...new Array(6)].map((_, index) => (
